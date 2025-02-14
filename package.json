@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "name": "redux-storage-effect",
+    "main": "src/index.ts",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "devDependencies": {
+        "@types/bun": "^1.2.2"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^2.5.1",
+        "io-ts": "^2.2.22"
+    }
+}
