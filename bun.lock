@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "@raison/persist",
+      "name": "redux-storage-effect",
       "dependencies": {
         "@reduxjs/toolkit": "^2.5.1",
         "io-ts": "^2.2.22",

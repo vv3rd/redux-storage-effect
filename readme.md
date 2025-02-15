@@ -16,7 +16,7 @@ The `hydrateAction` that is passed to `createPersistEffects` then must have payl
 This is "kitchen sink" example, meant to showcase all the features.
 
 ```ts
-import {createPersistenceEffects} from '@raison/persist';
+import {createPersistenceEffects} from 'redux-storage-effect';
 
 const effects = createPersistenceEffects<AppModel>('preferences-key', 'local', {
     hydrate: restoreUserPreferences,
