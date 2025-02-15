@@ -15,7 +15,7 @@
         devShell = pkgs.mkShell {
           packages = [
             pkgs.bun
-            pkgs.biome
+            pkgs.nodejs_22.pkgs.prettier
             pkgs.nodejs_22
           ];
 
