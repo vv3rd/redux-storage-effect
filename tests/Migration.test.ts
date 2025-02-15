@@ -56,21 +56,21 @@ const mustBe =
   };
 
 function setupV1() {
-  return buildMigration<v1>(_ => _.currentVersion(mustBe(v1)));
+  return buildMigration<v1>((_) => _.currentVersion(mustBe(v1)));
 }
 
 function setupV2() {
-  return buildMigration<v2>(_ =>
-    _.currentVersion(mustBe(v2)).olderVersion(mustBe(v1), v0 => ({
+  return buildMigration<v2>((_) =>
+    _.currentVersion(mustBe(v2)).olderVersion(mustBe(v1), (v0) => ({
       bar: Number(v0.foo),
-    }))
+    })),
   );
 }
 
 function setupV3() {
-  return buildMigration<v3>(_ =>
+  return buildMigration<v3>((_) =>
     _.currentVersion(mustBe(v3))
-      .olderVersion(mustBe(v2), v1 => ({ baz: String(v1.bar) }))
-      .olderVersion(mustBe(v1), v0 => ({ bar: Number(v0.foo) }))
+      .olderVersion(mustBe(v2), (v1) => ({ baz: String(v1.bar) }))
+      .olderVersion(mustBe(v1), (v0) => ({ bar: Number(v0.foo) })),
   );
 }
